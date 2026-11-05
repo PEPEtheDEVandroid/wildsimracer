@@ -29,7 +29,8 @@
 <div class="envoltorio">
   <section>
     <h2>Todas las novedades</h2>
-    <div class="novedades">
+    <div class="filtros" id="filtros"></div>
+    <div class="novedades" id="listado">
 
       <article class="nota">
         <time datetime="2026-10-28">28 octubre 2026</time><span class="juego">Assetto Corsa EVO</span>
@@ -71,5 +72,44 @@
   </footer>
 </div>
 
+
+<script>
+(function () {
+  var listado = document.getElementById("listado");
+  var filtros = document.getElementById("filtros");
+  if (!listado || !filtros) return;
+
+  var notas = Array.prototype.slice.call(listado.querySelectorAll(".nota"));
+  var juegos = [];
+  notas.forEach(function (nota) {
+    var etiqueta = nota.querySelector(".juego");
+    var juego = etiqueta ? etiqueta.textContent.trim() : "";
+    nota.dataset.juego = juego;
+    if (juego && juegos.indexOf(juego) === -1) juegos.push(juego);
+  });
+  if (juegos.length < 2) return;
+  juegos.sort();
+
+  function mostrar(juego) {
+    notas.forEach(function (nota) {
+      nota.hidden = juego !== "" && nota.dataset.juego !== juego;
+    });
+    Array.prototype.forEach.call(filtros.children, function (boton) {
+      boton.setAttribute("aria-pressed", boton.dataset.juego === juego ? "true" : "false");
+    });
+  }
+
+  [""].concat(juegos).forEach(function (juego) {
+    var boton = document.createElement("button");
+    boton.type = "button";
+    boton.className = "filtro";
+    boton.dataset.juego = juego;
+    boton.textContent = juego === "" ? "Todo" : juego;
+    boton.setAttribute("aria-pressed", juego === "" ? "true" : "false");
+    boton.addEventListener("click", function () { mostrar(juego); });
+    filtros.appendChild(boton);
+  });
+})();
+</script>
 </body>
 </html>

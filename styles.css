@@ -426,3 +426,34 @@ footer {
   margin: 26px 0 0;
   text-align: center;
 }
+
+/* Filtros por juego en el archivo de novedades */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 24px;
+}
+
+.filtro {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--apagado);
+  background: none;
+  border: 1px solid var(--linea);
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.filtro:hover { color: var(--texto); border-color: var(--apagado); }
+
+.filtro[aria-pressed="true"] {
+  background: var(--amarillo);
+  border-color: var(--amarillo);
+  color: #0C0D0F;
+}
+
+.nota[hidden] { display: none; }
