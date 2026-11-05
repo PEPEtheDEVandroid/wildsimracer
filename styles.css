@@ -406,3 +406,23 @@ footer {
   justify-content: center;
   margin: 20px 0 0;
 }
+
+/* Etiqueta de juego en el listado de novedades */
+.nota .juego {
+  font-family: var(--display);
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--apagado);
+}
+
+.nota .juego::before {
+  content: "·";
+  margin: 0 8px;
+  color: var(--linea);
+}
+
+.mas-novedades {
+  margin: 26px 0 0;
+  text-align: center;
+}
