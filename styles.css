@@ -401,3 +401,8 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
+
+.acciones-centro {
+  justify-content: center;
+  margin: 20px 0 0;
+}
