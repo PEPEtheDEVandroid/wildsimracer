@@ -407,8 +407,9 @@ footer {
   margin: 20px 0 0;
 }
 
-/* Etiqueta de juego en el listado de novedades */
-.nota .juego {
+/* Etiqueta de juego en el listado de novedades y en el artículo */
+.nota .juego,
+.articulo .juego {
   font-family: var(--display);
   font-size: 0.8rem;
   letter-spacing: 0.14em;
@@ -416,7 +417,8 @@ footer {
   color: var(--apagado);
 }
 
-.nota .juego::before {
+.nota .juego::before,
+.articulo .juego::before {
   content: "·";
   margin: 0 8px;
   color: var(--linea);
