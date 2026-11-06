@@ -276,6 +276,29 @@ h2 {
   border: 0;
 }
 
+/* Imagen oficial dentro de un artículo.
+   Si el enlace externo se cae, el onerror del img borra la figura entera
+   y la nota se queda sin hueco roto. */
+.imagen {
+  margin: 26px 0;
+}
+
+.imagen img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--linea);
+}
+
+.imagen figcaption {
+  font-family: var(--display);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--apagado);
+  margin-top: 8px;
+}
+
 /* Reproductor del canal: lista de subidas, siempre al día */
 .canal {
   position: relative;
