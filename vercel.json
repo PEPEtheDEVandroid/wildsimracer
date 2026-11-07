@@ -1,0 +1,251 @@
+{
+  "cleanUrls": false,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/baquet-simufy-sim05-comodidad-y-estilo-para-tu-setup-de-simracing",
+      "destination": "/construye-tu-propio-cockpit-de-simracing-para-escritorio/",
+      "permanent": true
+    },
+    {
+      "source": "/cockpits-sabelt-innovacion-y-personalizacion-para-simracing",
+      "destination": "/construye-tu-propio-cockpit-de-simracing-para-escritorio/",
+      "permanent": true
+    },
+    {
+      "source": "/como-elegir-el-cockpit-de-simracing-perfecto-para-ti",
+      "destination": "/construye-tu-propio-cockpit-de-simracing-para-escritorio/",
+      "permanent": true
+    },
+    {
+      "source": "/como-elegir-tu-asiento-para-cockpit-de-simracing-guia-completa",
+      "destination": "/construye-tu-propio-cockpit-de-simracing-para-escritorio/",
+      "permanent": true
+    },
+    {
+      "source": "/gt-omega-classic-steering-wheel-stand-ideal-para-espacios-reducidos",
+      "destination": "/construye-tu-propio-cockpit-de-simracing-para-escritorio/",
+      "permanent": true
+    },
+    {
+      "source": "/modauto-n710r-el-semibaquet-que-eleva-tu-experiencia-simracing",
+      "destination": "/construye-tu-propio-cockpit-de-simracing-para-escritorio/",
+      "permanent": true
+    },
+    {
+      "source": "/next-level-racing-ers3-elite-reclining-seat-confort-y-versatilidad-para-simracers",
+      "destination": "/construye-tu-propio-cockpit-de-simracing-para-escritorio/",
+      "permanent": true
+    },
+    {
+      "source": "/next-level-racing-gt-lite-el-cockpit-portatil-que-combina-comodidad-y-rendimiento",
+      "destination": "/construye-tu-propio-cockpit-de-simracing-para-escritorio/",
+      "permanent": true
+    },
+    {
+      "source": "/treq-one-basic-la-base-solida-para-tu-simulacion-de-carreras",
+      "destination": "/construye-tu-propio-cockpit-de-simracing-para-escritorio/",
+      "permanent": true
+    },
+    {
+      "source": "/wheel-stand-pro-la-solucion-plegable-ideal-para-tu-simracing",
+      "destination": "/construye-tu-propio-cockpit-de-simracing-para-escritorio/",
+      "permanent": true
+    },
+    {
+      "source": "/cammus-lc100-la-mejor-opcion-en-pedales-de-simracing-por-menos-de-300e",
+      "destination": "/el-dinero-va-en-los-pedales-no-en-la-base/",
+      "permanent": true
+    },
+    {
+      "source": "/celulas-de-carga-el-secreto-del-realismo-en-los-pedales-de-simracing",
+      "destination": "/el-dinero-va-en-los-pedales-no-en-la-base/",
+      "permanent": true
+    },
+    {
+      "source": "/moza-crp-pedales-de-aluminio-con-celula-de-carga-para-simracers-exigentes",
+      "destination": "/el-dinero-va-en-los-pedales-no-en-la-base/",
+      "permanent": true
+    },
+    {
+      "source": "/moza-sr-p-precision-y-rendimiento-para-tu-ecosistema-moza",
+      "destination": "/el-dinero-va-en-los-pedales-no-en-la-base/",
+      "permanent": true
+    },
+    {
+      "source": "/simagic-p1000-pedales-de-alta-gama-para-una-simulacion-sin-limites",
+      "destination": "/el-dinero-va-en-los-pedales-no-en-la-base/",
+      "permanent": true
+    },
+    {
+      "source": "/simagic-p2000-la-cuspide-de-los-pedales-de-simracing",
+      "destination": "/el-dinero-va-en-los-pedales-no-en-la-base/",
+      "permanent": true
+    },
+    {
+      "source": "/simagic-p500-pedales-de-entrada-con-tecnologia-dual-sensor-para-simracers-exigentes",
+      "destination": "/el-dinero-va-en-los-pedales-no-en-la-base/",
+      "permanent": true
+    },
+    {
+      "source": "/simsonn-pedales-con-celula-de-carga-que-desafian-a-la-gama-alta",
+      "destination": "/el-dinero-va-en-los-pedales-no-en-la-base/",
+      "permanent": true
+    },
+    {
+      "source": "/vrs-directforce-pro-pedals-precision-y-durabilidad-para-simracers-exigentes",
+      "destination": "/el-dinero-va-en-los-pedales-no-en-la-base/",
+      "permanent": true
+    },
+    {
+      "source": "/asetek-simsports-la-prima-potencia-direct-drive-a-un-precio-competitivo",
+      "destination": "/mejores-volantes-direct-drive-para-empezar-en-simracing/",
+      "permanent": true
+    },
+    {
+      "source": "/bases-direct-drive-la-revolucion-del-force-feedback-en-simracing",
+      "destination": "/mejores-volantes-direct-drive-para-empezar-en-simracing/",
+      "permanent": true
+    },
+    {
+      "source": "/bases-y-volantes-para-playstation-opciones-perfectas-para-simracers",
+      "destination": "/mejores-volantes-direct-drive-para-empezar-en-simracing/",
+      "permanent": true
+    },
+    {
+      "source": "/cammus-c12-direct-drive-con-fuerza-a-un-precio-irresistible",
+      "destination": "/mejores-volantes-direct-drive-para-empezar-en-simracing/",
+      "permanent": true
+    },
+    {
+      "source": "/cammus-c5-el-volante-direct-drive-que-democratiza-el-simracing",
+      "destination": "/mejores-volantes-direct-drive-para-empezar-en-simracing/",
+      "permanent": true
+    },
+    {
+      "source": "/conspit-ares-platinum-potencia-y-precision-con-18-nm-de-torque",
+      "destination": "/mejores-volantes-direct-drive-para-empezar-en-simracing/",
+      "permanent": true
+    },
+    {
+      "source": "/fanatec-clubsport-dd-vs-clubsport-dd-cual-es-la-base-direct-drive-para-ti",
+      "destination": "/mejores-volantes-direct-drive-para-empezar-en-simracing/",
+      "permanent": true
+    },
+    {
+      "source": "/fanatec-csl-dd-qr2-5-nm-la-base-de-volante-direct-drive-para-pc-y-xbox",
+      "destination": "/mejores-volantes-direct-drive-para-empezar-en-simracing/",
+      "permanent": true
+    },
+    {
+      "source": "/moza-ks-el-volante-que-redefine-la-versatilidad-en-simracing",
+      "destination": "/mejores-volantes-direct-drive-para-empezar-en-simracing/",
+      "permanent": true
+    },
+    {
+      "source": "/moza-lanza-el-r3-mas-economico-para-pc-rendimiento-direct-drive-por-solo-329e",
+      "destination": "/mejores-volantes-direct-drive-para-empezar-en-simracing/",
+      "permanent": true
+    },
+    {
+      "source": "/moza-r3-r5-r9-y-r12-analisis-a-fondo-de-las-bases-direct-drive-que-revolucionan-el-simracing",
+      "destination": "/mejores-volantes-direct-drive-para-empezar-en-simracing/",
+      "permanent": true
+    },
+    {
+      "source": "/nacon-sube-la-apuesta-analizamos-su-nuevo-bundle-direct-drive-con-el-volante-rs-pure",
+      "destination": "/mejores-volantes-direct-drive-para-empezar-en-simracing/",
+      "permanent": true
+    },
+    {
+      "source": "/pxn-v99-el-volante-ideal-para-iniciarse-en-el-simracing-en-consola",
+      "destination": "/mejores-volantes-direct-drive-para-empezar-en-simracing/",
+      "permanent": true
+    },
+    {
+      "source": "/simagic-alpha-mini-pequena-en-tamano-grande-en-rendimiento",
+      "destination": "/mejores-volantes-direct-drive-para-empezar-en-simracing/",
+      "permanent": true
+    },
+    {
+      "source": "/simucube-2-sport-la-puerta-de-entrada-al-direct-drive-de-elite",
+      "destination": "/mejores-volantes-direct-drive-para-empezar-en-simracing/",
+      "permanent": true
+    },
+    {
+      "source": "/thrustmaster-t598-direct-drive-a-precio-accesible-pero-la-mejor-opcion",
+      "destination": "/mejores-volantes-direct-drive-para-empezar-en-simracing/",
+      "permanent": true
+    },
+    {
+      "source": "/arranca-la-temporada-3-de-2025-en-iracing-todas-las-novedades",
+      "destination": "/novedades/",
+      "permanent": true
+    },
+    {
+      "source": "/assetto-corsa-evo-la-evolucion-llega-a-la-simulacion",
+      "destination": "/novedades/",
+      "permanent": true
+    },
+    {
+      "source": "/assetto-corsa-evo-todo-lo-que-sabemos-tras-el-ultimo-video-oficial-de-navidad",
+      "destination": "/novedades/",
+      "permanent": true
+    },
+    {
+      "source": "/assetto-corsa-evo-update-0-2-todos-los-detalles-de-la-nueva-actualizacion",
+      "destination": "/novedades/",
+      "permanent": true
+    },
+    {
+      "source": "/automobilista-2-el-simulador-brasileno-que-conquista-el-mundo",
+      "destination": "/novedades/",
+      "permanent": true
+    },
+    {
+      "source": "/automobilista-2-v1-6-la-simulacion-se-intensifica",
+      "destination": "/novedades/",
+      "permanent": true
+    },
+    {
+      "source": "/iracing-2025-temporada-1-novedades-que-aceleran-el-pulso",
+      "destination": "/novedades/",
+      "permanent": true
+    },
+    {
+      "source": "/iracing-2025-temporada-12-nuevos-coches-circuito-y-mejoras-que-debes-conocer",
+      "destination": "/novedades/",
+      "permanent": true
+    },
+    {
+      "source": "/iracing-el-simulador-de-carreras-online-que-te-pone-en-la-pista",
+      "destination": "/novedades/",
+      "permanent": true
+    },
+    {
+      "source": "/le-mans-ultimate-el-simulador-oficial-del-campeonato-mundial-de-resistencia",
+      "destination": "/novedades/",
+      "permanent": true
+    },
+    {
+      "source": "/le-mans-ultimate-lanza-su-version-1-0-la-experiencia-wec-definitiva-o-un-proyecto-a-medio-gas",
+      "destination": "/novedades/",
+      "permanent": true
+    },
+    {
+      "source": "/lfm-y-automobilista-2-la-actualizacion-v1-6-revitaliza-el-simracing-competitivo",
+      "destination": "/novedades/",
+      "permanent": true
+    },
+    {
+      "source": "/project-motor-racing-el-nuevo-simulador",
+      "destination": "/novedades/",
+      "permanent": true
+    },
+    {
+      "source": "/assetto-corsa-el-simulador-de-carreras-para-pc-que-abraza-la-personalizacion",
+      "destination": "/personaliza-tu-assetto-corsa-con-mods-tutorial-facil-y-sencillo/",
+      "permanent": true
+    }
+  ]
+}
