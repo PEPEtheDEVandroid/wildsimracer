@@ -221,7 +221,12 @@ h2 {
 
 /* --- Artículo --- */
 
-.articulo { padding: 16px 0 48px; }
+/* Todo el artículo comparte una sola columna, para que el titular, el texto,
+   el vídeo y las imágenes empiecen y acaben en la misma vertical. */
+.articulo {
+  padding: 16px 0 48px;
+  max-width: 72ch;
+}
 
 .articulo h1 {
   font-family: var(--display);
@@ -232,8 +237,6 @@ h2 {
   margin: 10px 0 20px;
   text-wrap: balance;
 }
-
-.articulo p { max-width: 65ch; }
 
 .articulo h2 {
   font-family: var(--display);
@@ -247,7 +250,7 @@ h2 {
   margin: 34px 0 12px;
 }
 
-.articulo ul, .articulo ol { max-width: 65ch; padding-left: 22px; }
+.articulo ul, .articulo ol { padding-left: 22px; }
 .articulo li { margin-bottom: 8px; }
 
 .articulo video {
