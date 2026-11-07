@@ -225,7 +225,13 @@ h2 {
    el vídeo y las imágenes empiecen y acaben en la misma vertical. */
 .articulo {
   padding: 16px 0 48px;
-  max-width: 72ch;
+}
+
+/* En las páginas de artículo, la cabecera, el texto y el pie van en una
+   columna más estrecha y centrada en la pantalla. En la portada y en el
+   archivo no se aplica, que ahí el listado necesita el ancho entero. */
+body:has(.articulo) .envoltorio {
+  max-width: 760px;
 }
 
 .articulo h1 {
