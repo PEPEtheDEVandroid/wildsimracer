@@ -306,13 +306,17 @@ body:has(.articulo) .envoltorio {
   margin-top: 10px;
 }
 
-/* El credito va debajo del pie, mas pequeno y apagado: la licencia
-   obliga a citarlo, pero no tiene por que competir con el texto. */
-.imagen figcaption .credito {
-  display: block;
-  margin-top: 3px;
-  font-size: 0.78rem;
-  opacity: 0.7;
+/* Los creditos de imagen van juntos al final del articulo, para que el
+   pie de foto solo cuente lo que se ve. La licencia obliga a citar en la
+   pagina, asi que no basta con el enlace de la foto. */
+.creditos {
+  margin-top: 36px;
+  padding-top: 14px;
+  border-top: 1px solid var(--linea);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--apagado);
+  opacity: 0.85;
 }
 
 /* Reproductor del canal: lista de subidas, siempre al día */
