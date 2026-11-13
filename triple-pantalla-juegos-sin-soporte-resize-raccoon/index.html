@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Triple pantalla en juegos que no la soportan, con Resize Raccoon — WildSimRacer</title>
+<meta name="description" content="Cómo usar Resize Raccoon para jugar en triple pantalla en juegos que no traen la opción, sin NVIDIA Surround. Se configura una vez y vale para todos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="robots" content="max-image-preview:large">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:site_name" content="WildSimRacer">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Triple pantalla en juegos que no la soportan, con Resize Raccoon">
+<meta property="og:description" content="Cómo usar Resize Raccoon para jugar en triple pantalla en juegos que no traen la opción, sin NVIDIA Surround. Se configura una vez y vale para todos.">
+<meta property="og:url" content="https://wildsimracer.es/triple-pantalla-juegos-sin-soporte-resize-raccoon/">
+<meta property="og:image" content="https://wildsimracer.es/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<div class="kerb"></div>
+
+<div class="envoltorio">
+  <div class="cabecera-mini">
+    <p class="marca"><a href="/">Wild<span>Sim</span>Racer</a></p>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="https://www.youtube.com/@WildSimRacer">Canal</a>
+    </nav>
+  </div>
+</div>
+
+<div class="kerb"></div>
+
+<div class="envoltorio">
+  <article class="articulo">
+    <time datetime="2026-11-13">13 noviembre 2026</time><span class="juego">Tutorial</span>
+    <h1>Triple pantalla en juegos que no la soportan, con Resize Raccoon</h1>
+
+    <p>Si tienes triple pantalla ya te habrás encontrado con el problema: hay juegos que no traen opción de triples y te dejan con la imagen en la pantalla del medio y las otras dos en negro. Esto se arregla con un programa gratuito que se llama Resize Raccoon, y lo mejor es que se configura una sola vez y el método te vale para cualquier juego. Solo tienes que ir añadiendo los que quieras.</p>
+
+    <h2>Qué hace exactamente</h2>
+
+    <p>Resize Raccoon es un gestor de ventanas de Windows: le dices qué tamaño y qué posición quieres para la ventana de un programa, y te la coloca ahí sola cada vez que lo abres, sin que tengas que estar estirándola a mano. De hecho su autor lo hizo justamente para esto, para estirar ventanas sin bordes por tres monitores en juegos de simracing.</p>
+
+    <p>Y aquí está la gracia frente a NVIDIA Surround. Surround obliga a Windows a ver tus tres pantallas como una sola gigante, y eso te descoloca la barra de tareas y te complica la vida fuera del juego. Resize Raccoon no toca la configuración de pantallas de Windows, solo coge la ventana del juego y la estira. Cuando cierras, todo sigue como estaba.</p>
+
+    <div class="aviso">
+      <p>Ojo con una cosa: esto estira la imagen por las tres pantallas, pero no es lo mismo que el soporte de triples de verdad. Un juego con triples nativas renderiza tres vistas con su ángulo y su compensación de marcos. Aquí tienes una sola vista muy ancha, así que en los laterales vas a notar algo de deformación. Es la solución para los juegos que no te dan otra opción, no algo mejor que lo nativo.</p>
+    </div>
+
+    <h2>Paso 1: descargarlo</h2>
+
+    <p>Es gratis y de código abierto. Se baja de la sección de <em>Releases</em> de <a href="https://github.com/mistenkt/resize-raccoon">su página en GitHub</a>, cogiendo siempre la última versión.</p>
+
+    <h2>Paso 2: calcular tu resolución</h2>
+
+    <p>Antes de tocar nada necesitas saber el número que vas a meter. Es fácil: sumas el ancho de las tres pantallas y dejas el alto tal cual.</p>
+
+    <ul>
+      <li>Tres pantallas en 1080p: 5760 x 1080.</li>
+      <li>Tres pantallas en 2K, que es lo que tengo yo: 7680 x 1440.</li>
+      <li>Tres pantallas en 4K: 11520 x 2160.</li>
+    </ul>
+
+    <h2>Paso 3: poner el juego en ventana sin bordes</h2>
+
+    <p>Esto es lo que más falla y por lo que mucha gente dice que el programa no le funciona. El juego tiene que estar en <strong>ventana sin bordes</strong> o en modo ventana, nunca en pantalla completa. Si está en pantalla completa, Resize Raccoon no puede engancharse a la ventana y no pasa nada.</p>
+
+    <p>La opción suele estar en los ajustes de vídeo del juego, y según el juego la verás como "ventana sin bordes", "borderless window" o "borderless fullscreen".</p>
+
+    <h2>Paso 4: crear el perfil del juego</h2>
+
+    <p>Abres Resize Raccoon y creas un perfil nuevo. Te va a pedir cuatro cosas:</p>
+
+    <ul>
+      <li><strong>El proceso del juego</strong>, o sea su ejecutable.</li>
+      <li><strong>Un nombre</strong> para el perfil, el que tú quieras.</li>
+      <li><strong>El tamaño</strong>, que es la resolución que has calculado en el paso 2.</li>
+      <li><strong>La posición</strong>, que es dónde empieza la ventana.</li>
+    </ul>
+
+    <p>Lo de la posición tiene trampa y es donde más gente se atasca, porque depende de cuál sea tu pantalla principal en Windows. Si la principal es la del medio, la de la izquierda está en coordenadas negativas y ahí tienes que meter un número negativo, no un cero. Por eso el programa trae <strong>ajustes predefinidos pensados para triple pantalla</strong>: si no lo tienes claro, tira de esos y te ahorras el lío.</p>
+
+    <p>Antes de guardar, prueba el perfil. El programa te deja probarlo ahí mismo para ver si la ventana se coloca bien.</p>
+
+    <h2>Paso 5: que se aplique solo</h2>
+
+    <p>Para no tener que darle a un botón cada vez que abres el juego, hay que activar dos cosas, y son dos distintas:</p>
+
+    <ul>
+      <li><strong>Auto-Resize</strong>, que se activa dentro de cada perfil y hace que se aplique cuando arranca ese juego.</li>
+      <li><strong>La vigilancia de procesos</strong>, que se activa en la pantalla principal del programa. Si esto está apagado, el Auto-Resize de los perfiles no sirve de nada.</li>
+    </ul>
+
+    <p>Si al abrir el juego la ventana se coloca antes de tiempo y se queda mal, en el perfil puedes meter un <strong>retardo</strong> para que espere unos segundos a que el juego termine de cargar antes de estirar la ventana. También puedes dejar el programa minimizado en la bandeja del sistema y olvidarte de él.</p>
+
+    <h2>Paso 6: repetir para cada juego nuevo</h2>
+
+    <p>Y aquí está lo bueno. Lo de arriba lo haces una vez y ya está entendido, porque en todos los juegos se configura exactamente igual. Cuando quieras añadir otro juego solo tienes que volver al paso 4 y crearle su perfil: el ejecutable y la misma resolución de siempre. Nada más.</p>
+
+    <h2>Si no te funciona</h2>
+
+    <ul>
+      <li><strong>No pasa nada al abrir el juego.</strong> Casi seguro que lo tienes en pantalla completa. Vuelve al paso 3.</li>
+      <li><strong>El perfil no se aplica solo.</strong> Mira que tengas activadas las dos cosas del paso 5, no solo una.</li>
+      <li><strong>El programa no consigue mover la ventana.</strong> Hay procesos que se resisten, y eso se arregla abriendo Resize Raccoon como administrador.</li>
+      <li><strong>La ventana se coloca mal al arrancar.</strong> Métele retardo en el perfil.</li>
+    </ul>
+
+    <h2>Un extra para los cacharreros</h2>
+
+    <p>Si tienes Stream Deck, puedes dispararle un perfil desde un botón. Con el programa abierto, se lanza desde la línea de comandos o desde un archivo .bat con esta orden:</p>
+
+    <p><code>echo apply-profile {nombreDelPerfil} &gt; \\.\pipe\resize-raccoon</code></p>
+
+    <p>Si el nombre del perfil tiene espacios, lo pones entre comillas.</p>
+
+    <h2>Lo que yo haría</h2>
+
+    <p>Lo primero de todo, mira si el juego lleva triples nativas, porque si las lleva son mejores y no necesitas nada de esto. Esto es para los que no las llevan, que son unos cuantos y llevan años sin arreglarlo.</p>
+
+    <p>Y si vas a montar triples o te lo estás pensando, te dejo <a href="/triple-pantalla-ultrawide-o-vr-para-simracing/">lo que opino sobre triple pantalla, ultrawide y VR</a>, que ahí cuento por qué para mí no hay color.</p>
+
+    <p><a href="/">Volver al inicio</a></p>
+  </article>
+</div>
+
+<div class="kerb"></div>
+
+<div class="envoltorio">
+  <footer>
+    <div class="redes">
+      <a href="https://www.youtube.com/@WildSimRacer">YouTube</a>
+      <a href="https://www.instagram.com/wildsimracer/">Instagram</a>
+    </div>
+    <p>WildSimRacer</p>
+  </footer>
+</div>
+
+</body>
+</html>
