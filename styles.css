@@ -300,12 +300,19 @@ body:has(.articulo) .envoltorio {
 }
 
 .imagen figcaption {
-  font-family: var(--display);
-  font-size: 0.8rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-size: 0.9rem;
+  line-height: 1.45;
   color: var(--apagado);
-  margin-top: 8px;
+  margin-top: 10px;
+}
+
+/* El credito va debajo del pie, mas pequeno y apagado: la licencia
+   obliga a citarlo, pero no tiene por que competir con el texto. */
+.imagen figcaption .credito {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.78rem;
+  opacity: 0.7;
 }
 
 /* Reproductor del canal: lista de subidas, siempre al día */
