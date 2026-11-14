@@ -502,3 +502,68 @@ footer {
 }
 
 .nota[hidden] { display: none; }
+
+/* Formulario de contacto */
+.formulario {
+  margin-top: 28px;
+  display: grid;
+  gap: 18px;
+  max-width: 560px;
+}
+
+.formulario label {
+  display: block;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--apagado);
+  margin-bottom: 7px;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: var(--cuerpo);
+  font-size: 1rem;
+  color: var(--texto);
+  background: var(--superficie);
+  border: 1px solid var(--linea);
+  padding: 12px 14px;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: none;
+  border-color: var(--amarillo);
+}
+
+.formulario textarea {
+  min-height: 170px;
+  resize: vertical;
+}
+
+.formulario button {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 12px 22px;
+  border: 2px solid var(--amarillo);
+  background: var(--amarillo);
+  color: #0C0D0F;
+  cursor: pointer;
+  justify-self: start;
+}
+
+.formulario button:hover { background: #FFD21A; }
+
+/* Trampa para robots de spam: nunca debe verse */
+.trampa {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}

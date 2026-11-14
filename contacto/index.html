@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacto — WildSimRacer</title>
+<meta name="description" content="Escríbeme si quieres corregirme algo, contarme tu configuración de simracing o proponerme un tema.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="robots" content="noindex"><!-- TEMPORAL: quitar al pegar la clave de Web3Forms -->
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:site_name" content="WildSimRacer">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contacto">
+<meta property="og:description" content="Escríbeme si quieres corregirme algo, contarme tu configuración de simracing o proponerme un tema.">
+<meta property="og:url" content="https://wildsimracer.es/contacto/">
+<meta property="og:image" content="https://wildsimracer.es/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<div class="kerb"></div>
+
+<div class="envoltorio">
+  <div class="cabecera-mini">
+    <p class="marca"><a href="/">Wild<span>Sim</span>Racer</a></p>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="https://www.youtube.com/@WildSimRacer">Canal</a>
+    </nav>
+  </div>
+</div>
+
+<div class="kerb"></div>
+
+<div class="envoltorio">
+  <section>
+    <h1>Contacto</h1>
+    <p>Si quieres corregirme algo, contarme cómo tienes montado tu equipo o proponerme un tema para un vídeo o un artículo, escríbeme por aquí. Contesto yo, no hay nadie más detrás.</p>
+
+    <form class="formulario" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="PEGAR_AQUI_LA_CLAVE">
+      <input type="hidden" name="subject" value="Mensaje desde wildsimracer.es">
+      <input type="hidden" name="from_name" value="wildsimracer.es">
+      <input type="hidden" name="redirect" value="https://wildsimracer.es/contacto/gracias/">
+
+      <div>
+        <label for="nombre">Tu nombre</label>
+        <input id="nombre" type="text" name="nombre" required>
+      </div>
+
+      <div>
+        <label for="email">Tu correo</label>
+        <input id="email" type="email" name="email" required>
+      </div>
+
+      <div>
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+      </div>
+
+      <label class="trampa">No rellenar <input type="checkbox" name="botcheck"></label>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="redes">
+      <a href="https://www.youtube.com/@WildSimRacer">YouTube</a>
+      <a href="https://www.instagram.com/wildsimracer/">Instagram</a>
+    </div>
+    <p>WildSimRacer</p>
+  </footer>
+</div>
+
+</body>
+</html>
