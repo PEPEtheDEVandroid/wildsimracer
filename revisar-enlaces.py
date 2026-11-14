@@ -42,7 +42,12 @@ def destino(url):
 
 def main():
     todas = sorted(paginas())
-    articulos = [p for p in todas if p not in LISTADOS]
+    # Las paginas con noindex (p. ej. la confirmacion del formulario) no se
+    # enlazan a proposito, asi que no cuentan como huerfanas.
+    def noindex(ruta):
+        with open(ruta, encoding="utf-8") as fh:
+            return re.search(r'<meta name="robots"[^>]*noindex', fh.read())
+    articulos = [p for p in todas if p not in LISTADOS and not noindex(p)]
     enlaces = {}
     rotos = []
 
