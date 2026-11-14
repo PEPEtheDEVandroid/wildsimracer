@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
-<meta name="robots" content="noindex"><!-- TEMPORAL: quitar al pegar la clave de Web3Forms -->
+<meta name="robots" content="max-image-preview:large">
 <link rel="icon" href="/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:site_name" content="WildSimRacer">
@@ -42,14 +42,14 @@
     <p>Si quieres corregirme algo, contarme cómo tienes montado tu equipo o proponerme un tema para un vídeo o un artículo, escríbeme por aquí. Contesto yo, no hay nadie más detrás.</p>
 
     <form class="formulario" action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="PEGAR_AQUI_LA_CLAVE">
+      <input type="hidden" name="access_key" value="95833a75-aee3-4d40-b25b-4b3b8ae6841a">
       <input type="hidden" name="subject" value="Mensaje desde wildsimracer.es">
       <input type="hidden" name="from_name" value="wildsimracer.es">
       <input type="hidden" name="redirect" value="https://wildsimracer.es/contacto/gracias/">
 
       <div>
         <label for="nombre">Tu nombre</label>
-        <input id="nombre" type="text" name="nombre" required>
+        <input id="nombre" type="text" name="name" required>
       </div>
 
       <div>
@@ -59,19 +59,22 @@
 
       <div>
         <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" required></textarea>
+        <textarea id="mensaje" name="message" required></textarea>
       </div>
 
       <label class="trampa">No rellenar <input type="checkbox" name="botcheck"></label>
 
       <button type="submit">Enviar</button>
     </form>
+
+    <p class="creditos">Si el formulario te diera algún problema, también puedes escribirme directamente a <a href="mailto:wildsimracer@gmail.com">wildsimracer@gmail.com</a>.</p>
   </section>
 
   <footer>
     <div class="redes">
       <a href="https://www.youtube.com/@WildSimRacer">YouTube</a>
       <a href="https://www.instagram.com/wildsimracer/">Instagram</a>
+      <a href="/contacto/">Contacto</a>
     </div>
     <p>WildSimRacer</p>
   </footer>

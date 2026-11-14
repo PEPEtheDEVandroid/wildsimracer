@@ -18,6 +18,8 @@ def paginas():
         rel = os.path.relpath(dirpath, RAIZ)
         url = BASE + "/" if rel == "." else f"{BASE}/{rel.replace(os.sep, '/')}/"
         html = open(os.path.join(dirpath, "index.html"), encoding="utf-8").read()
+        if re.search(r'<meta name="robots"[^>]*noindex', html):
+            continue
         m = re.search(r'<time datetime="(\d{4}-\d{2}-\d{2})"', html)
         yield url, (m.group(1) if m else None)
 
