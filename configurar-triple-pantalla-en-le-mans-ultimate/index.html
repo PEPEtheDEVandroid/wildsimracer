@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cómo configurar triple pantalla en Le Mans Ultimate — WildSimRacer</title>
+<meta name="description" content="Paso a paso para dejar las triples bien en Le Mans Ultimate: modo ventana, Multiview y la herramienta de triples. Sin NVIDIA Surround.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="robots" content="max-image-preview:large">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:site_name" content="WildSimRacer">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cómo configurar triple pantalla en Le Mans Ultimate">
+<meta property="og:description" content="Paso a paso para dejar las triples bien en Le Mans Ultimate: modo ventana, Multiview y la herramienta de triples. Sin NVIDIA Surround.">
+<meta property="og:url" content="https://wildsimracer.es/configurar-triple-pantalla-en-le-mans-ultimate/">
+<meta property="og:image" content="https://wildsimracer.es/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<div class="kerb"></div>
+
+<div class="envoltorio">
+  <div class="cabecera-mini">
+    <p class="marca"><a href="/">Wild<span>Sim</span>Racer</a></p>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="https://www.youtube.com/@WildSimRacer">Canal</a>
+    </nav>
+  </div>
+</div>
+
+<div class="kerb"></div>
+
+<div class="envoltorio">
+  <article class="articulo">
+    <time datetime="2026-11-16">16 noviembre 2026</time><span class="juego">Tutorial</span>
+    <h1>Cómo configurar triple pantalla en Le Mans Ultimate</h1>
+
+    <p>Buena noticia para empezar: <strong>Le Mans Ultimate no necesita NVIDIA Surround</strong>. El juego se estira él solo por las tres pantallas en modo ventana, y lo hace con triples de verdad, con su ángulo y su compensación de marcos. Así que tus tres monitores se quedan configurados por separado en Windows, como tienen que estar.</p>
+
+    <p>Lo que pasa es que la configuración está repartida en tres sitios distintos y ninguno es obvio. Por eso tanta gente se atasca. Vamos por orden.</p>
+
+    <h2>Paso 1: coge el metro</h2>
+
+    <p>LMU describe tu montaje con cinco números y los vas a necesitar todos. Mídelos antes de abrir el juego:</p>
+
+    <ul>
+      <li><strong>Ancho de la pantalla</strong>, en metros. Mide una sola, <strong>marco incluido</strong>, que es lo que el juego espera.</li>
+      <li><strong>Alto de la pantalla</strong>, en metros.</li>
+      <li><strong>Distancia a los ojos</strong>, en metros. Desde tu cara hasta la pantalla central, no desde el asiento.</li>
+      <li><strong>Ángulo de los laterales</strong>, en grados.</li>
+      <li><strong>Hueco entre marcos</strong>, en metros. Lo que hay de imagen a imagen entre dos pantallas.</li>
+    </ul>
+
+    <p>Van en metros con decimales: una pantalla de 69,7 centímetros de ancho se escribe 0.697, y con punto, no con coma.</p>
+
+    <h2>Paso 2: modo ventana, y ojo con esto</h2>
+
+    <p>En los ajustes de gráficos pon el <strong>modo ventana</strong> y elige la resolución de las tres pantallas juntas. Si tienes tres de 2K, son 7680 x 1440.</p>
+
+    <p>Aquí está el fallo que más se repite: tiene que ser <strong>ventana</strong>, no ventana sin bordes. Con sin bordes la imagen te sale aplastada.</p>
+
+    <h2>Paso 3: activa Multiview</h2>
+
+    <p>En esa misma pantalla de gráficos tienes el interruptor de <strong>Multiview</strong>. Ese es el que pone el juego en modo triples de verdad. Actívalo.</p>
+
+    <h2>Paso 4: la herramienta de triples</h2>
+
+    <p>Ahora toca meter tus cinco números, y esto va dentro del coche, en pista.</p>
+
+    <p>La herramienta se abre con <strong>Ctrl más la tecla que tengas asignada a "Triple Screen Config"</strong>. Esa asignación está en los ajustes de controles, en la pestaña de interacción, dentro del apartado de hardware. Míralo antes para saber qué tecla te toca, porque cambia según cómo lo tengas y según el teclado.</p>
+
+    <p>Lo bueno es que <strong>la herramienta se ve en tiempo real</strong>: cada número que cambias se nota en las pantallas al momento. Si ya tenías algo guardado te aparece puesto.</p>
+
+    <p>Y te digo una cosa de la que no se suele avisar: <strong>el ángulo de los laterales acábalo de ajustar a ojo</strong>. Verás gente usando 15 grados, otros 45 y otros 60, y es que depende de cómo tengas montado el soporte. Mete tu medida como punto de partida y luego muévelo hasta que una línea recta que cruce de una pantalla a otra, como un guardarraíl o la línea de meta, se vea continua y sin quiebro. Cuando eso cuadra, está bien.</p>
+
+    <h2>Si Multiview te sale en gris</h2>
+
+    <p>Es el problema clásico de este juego y lleva pasando desde que salió. Si no puedes ni marcar la casilla, hay que activarlo desde el archivo de configuración.</p>
+
+    <p>En Steam, botón derecho sobre Le Mans Ultimate, Administrar, Ver archivos locales. Entras en la carpeta <strong>UserData</strong> y ahí está <strong>Config_DX11.ini</strong>. La ruta normal es Steam, steamapps, common, Le Mans Ultimate, UserData.</p>
+
+    <p><strong>Haz una copia del archivo antes de tocarlo.</strong> Dentro vas a encontrar una línea así:</p>
+
+    <p><code>ViewParams=(0.540, 0.340, 0.600, 15.000, 0.037)</code></p>
+
+    <p>Son tus cinco números en el mismo orden de antes: ancho, alto, distancia a los ojos, ángulo y hueco entre marcos. Debajo hay otras dos líneas, <code>LeftView</code> y <code>RightView</code>, con los mismos valores. Cambia las tres con tus medidas, guarda y abre el juego.</p>
+
+    <h2>Si vienes de rFactor 2, atajo</h2>
+
+    <p>Los dos juegos son del mismo estudio y usan el mismo archivo. Si ya tenías las triples bien puestas en rFactor 2, copia su Config_DX11.ini a la carpeta de Le Mans Ultimate y te llevas la configuración hecha.</p>
+
+    <h2>Lo que te vas a encontrar</h2>
+
+    <p>Que te bajan los fps, y bastante. No es un fallo: con triples el juego dibuja tres vistas en vez de una. Tres pantallas en 2K son unos once millones de píxeles por fotograma, contra menos de cuatro millones de una sola. Es el precio de que los laterales se vean bien, y lo pagan todos los simuladores que hacen triples en condiciones.</p>
+
+    <p>Si además de bajarte los fps te da tirones, prueba a <strong>cerrar MSI Afterburner y RivaTuner</strong>. Los propios desarrolladores llegaron a avisar de que esos programas daban problemas de rendimiento en el juego.</p>
+
+    <h2>Un apunte sobre el FOV</h2>
+
+    <p>Con triples no tienes que calcular ningún FOV ni meter un número de grados en ningún sitio. Las medidas que has puesto en el paso 4 <strong>ya son el FOV</strong>: el juego sabe el tamaño de tus pantallas y a qué distancia estás, y con eso calcula la perspectiva correcta. Por eso con triples bien puestas todo se ve a su tamaño real sin tocar nada más.</p>
+
+    <p>Si quieres saber por qué no uso Surround y qué hago con los juegos que no traen triples, lo cuento en <a href="/por-que-no-uso-nvidia-surround/">este artículo</a> y en <a href="/triple-pantalla-juegos-sin-soporte-resize-raccoon/">el tutorial de Resize Raccoon</a>.</p>
+
+    <p><a href="/">Volver al inicio</a></p>
+  </article>
+</div>
+
+<div class="kerb"></div>
+
+<div class="envoltorio">
+  <footer>
+    <div class="redes">
+      <a href="https://www.youtube.com/@WildSimRacer">YouTube</a>
+      <a href="https://www.instagram.com/wildsimracer/">Instagram</a>
+    </div>
+    <p>WildSimRacer</p>
+  </footer>
+</div>
+
+</body>
+</html>
