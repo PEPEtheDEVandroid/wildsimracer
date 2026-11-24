@@ -567,3 +567,113 @@ footer {
   left: -9999px;
   opacity: 0;
 }
+
+/* Calculadora de FOV */
+.calc {
+  background: var(--superficie);
+  border: 1px solid var(--linea);
+  border-radius: 6px;
+  padding: 22px;
+  margin: 28px 0 0;
+}
+
+.calc-campos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+}
+
+.calc label {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+
+.calc-pista {
+  font-family: var(--cuerpo);
+  font-weight: 400;
+  font-size: .82rem;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--apagado);
+  margin: 2px 0 7px;
+}
+
+.calc input,
+.calc select {
+  font-family: var(--cuerpo);
+  font-size: 1.05rem;
+  color: var(--texto);
+  background: var(--asfalto);
+  border: 1px solid var(--linea);
+  border-radius: 4px;
+  padding: 11px 12px;
+  width: 100%;
+}
+
+.calc input:focus,
+.calc select:focus {
+  border-color: var(--amarillo);
+  outline: none;
+}
+
+.calc-salida {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2px;
+  background: var(--linea);
+  border: 1px solid var(--linea);
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  margin: 0 0 22px;
+  overflow: hidden;
+}
+
+.calc-dato {
+  background: var(--asfalto);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.calc-etiqueta {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: .95rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--apagado);
+}
+
+.calc-dato strong {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 2.6rem;
+  line-height: 1.1;
+  color: var(--amarillo);
+  margin: 4px 0 2px;
+}
+
+.calc-pie {
+  font-size: .82rem;
+  line-height: 1.4;
+  color: var(--apagado);
+}
+
+.calc-nota {
+  font-size: .95rem;
+  border-left: 3px solid var(--linea);
+  padding-left: 16px;
+  color: var(--apagado);
+}
+
+.calc-nota strong { color: var(--texto); }
+
+@media (max-width: 520px) {
+  .calc { padding: 18px; }
+  .calc-dato strong { font-size: 2.2rem; }
+}

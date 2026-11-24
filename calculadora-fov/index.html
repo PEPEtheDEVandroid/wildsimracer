@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de FOV para simracing (pantalla única y triple) — WildSimRacer</title>
+<meta name="description" content="Calcula el FOV correcto para iRacing, Assetto Corsa, ACC, rFactor 2 y Le Mans Ultimate. Con el ángulo de las pantallas laterales si llevas triple pantalla.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="robots" content="max-image-preview:large">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:site_name" content="WildSimRacer">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Calculadora de FOV para simracing (pantalla única y triple)">
+<meta property="og:description" content="Calcula el FOV correcto para iRacing, Assetto Corsa, ACC, rFactor 2 y Le Mans Ultimate. Con el ángulo de las pantallas laterales si llevas triple pantalla.">
+<meta property="og:url" content="https://wildsimracer.es/calculadora-fov/">
+<meta property="og:image" content="https://wildsimracer.es/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<div class="kerb"></div>
+
+<div class="envoltorio">
+  <div class="cabecera-mini">
+    <p class="marca"><a href="/">Wild<span>Sim</span>Racer</a></p>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="https://www.youtube.com/@WildSimRacer">Canal</a>
+    </nav>
+  </div>
+</div>
+
+<div class="kerb"></div>
+
+<div class="envoltorio">
+  <article class="articulo">
+    <h1>Calculadora de FOV para simracing</h1>
+
+    <p>El FOV es el ángulo que abarca la cámara dentro del juego. Hay un valor correcto, y no es cuestión de gustos: depende del tamaño de tu pantalla y de lo lejos que tengas la cara. Si lo pones más alto del que te toca, ves más mundo pero todo parece lejos y pequeño, y pierdes la referencia de a qué velocidad vas. Si lo pones más bajo, vas con anteojeras.</p>
+
+    <p>Mide dos cosas y rellena el formulario: <strong>las pulgadas de la pantalla</strong> (una sola, aunque lleves tres) y <strong>la distancia de tus ojos al cristal</strong>, en centímetros. Esa segunda medida es la que casi todo el mundo se inventa, y es la que más manda.</p>
+
+    <form class="calc" id="calc" novalidate>
+      <div class="calc-campos">
+        <label>Tamaño de la pantalla
+          <span class="calc-pista">pulgadas, en diagonal</span>
+          <input type="number" id="pulgadas" value="27" min="5" max="120" step="0.1" inputmode="decimal">
+        </label>
+
+        <label>Relación de aspecto
+          <span class="calc-pista">lo normal es 16:9</span>
+          <select id="aspecto">
+            <option value="16:9" selected>16:9 — monitor o tele normal</option>
+            <option value="21:9">21:9 — ultrapanorámica</option>
+            <option value="32:9">32:9 — superultrapanorámica</option>
+            <option value="16:10">16:10</option>
+            <option value="4:3">4:3</option>
+          </select>
+        </label>
+
+        <label>Distancia a tus ojos
+          <span class="calc-pista">centímetros, del ojo al cristal</span>
+          <input type="number" id="distancia" value="65" min="10" max="500" step="1" inputmode="decimal">
+        </label>
+
+        <label>Cuántas pantallas
+          <span class="calc-pista">&nbsp;</span>
+          <select id="pantallas">
+            <option value="1" selected>Una</option>
+            <option value="3">Tres</option>
+          </select>
+        </label>
+
+        <label id="campo-marco" hidden>Marco de la pantalla
+          <span class="calc-pista">milímetros, de cristal a cristal entre dos paneles</span>
+          <input type="number" id="marco" value="20" min="0" max="100" step="1" inputmode="decimal">
+        </label>
+      </div>
+    </form>
+
+    <div class="calc-salida" id="salida" aria-live="polite">
+      <div class="calc-dato">
+        <span class="calc-etiqueta">FOV horizontal</span>
+        <strong id="r-h">—</strong>
+        <span class="calc-pie">iRacing, Automobilista 2, Project CARS</span>
+      </div>
+      <div class="calc-dato">
+        <span class="calc-etiqueta">FOV vertical</span>
+        <strong id="r-v">—</strong>
+        <span class="calc-pie">Assetto Corsa, ACC, rFactor 2, Le Mans Ultimate</span>
+      </div>
+      <div class="calc-dato" id="dato-angulo" hidden>
+        <span class="calc-etiqueta">Ángulo de las laterales</span>
+        <strong id="r-a">—</strong>
+        <span class="calc-pie">respecto a la pantalla central</span>
+      </div>
+    </div>
+
+    <p class="calc-nota" id="nota-triple" hidden><strong>Importante con triple pantalla:</strong> ese valor es el de <em>una</em> pantalla, no el de las tres juntas. En los juegos con soporte nativo de triples es exactamente lo que hay que meter: el juego ya calcula las laterales a partir del ángulo y del marco, que se los das por separado. Si metes ahí el ángulo total te quedará todo deformado.</p>
+
+    <p class="calc-nota" id="nota-plano" hidden>Si lo que quieres es el ángulo de las tres como si fueran una superficie plana —para juegos que no soportan triples— son <strong id="r-t">—</strong> horizontales. Eso solo vale si las tienes sin angular; para el resto de casos te cuento el método en <a href="/triple-pantalla-juegos-sin-soporte-resize-raccoon/">triple pantalla en juegos que no la soportan</a>.</p>
+
+    <h2>Cómo medir bien la distancia</h2>
+
+    <p>Siéntate como te sientas a conducir, con las manos en el volante y la espalda donde la apoyas de verdad, no estirado hacia delante. Que alguien te mida desde el puente de la nariz hasta el cristal de la pantalla central. Si lo haces solo, una cinta métrica apoyada en la barbilla sirve de sobra: dos o tres centímetros de error no te van a cambiar el resultado.</p>
+
+    <p>Mide hasta el <strong>cristal</strong>, no hasta el marco ni hasta el borde de la mesa. Y mide a la pantalla central, aunque lleves tres.</p>
+
+    <h2>Las pulgadas son de una pantalla</h2>
+
+    <p>Si llevas triples, pon las pulgadas de <em>una</em>. Es el error más repetido: alguien con tres de 27 pulgadas escribe 81 y le sale un número absurdo. El juego quiere saber cuánto abarca el panel que tienes delante.</p>
+
+    <p>El marco que te pide la calculadora es el hueco real entre dos imágenes: el borde de plástico de una pantalla más el de la siguiente. Si no lo sabes, mídelo con una regla o pon 20 mm, que es lo típico en monitores de hace unos años.</p>
+
+    <h2>Qué valor usa cada juego</h2>
+
+    <p>No todos los simuladores piden lo mismo, y por eso el número que le funciona a tu amigo no te sirve a ti. <strong>iRacing usa FOV horizontal.</strong> <strong>Assetto Corsa y Assetto Corsa Competizione usan el vertical</strong>, que siempre es un número más bajo. <strong>rFactor 2 y Le Mans Ultimate también van por el vertical.</strong> Automobilista 2 y Project CARS usan el horizontal.</p>
+
+    <p>En Assetto Corsa lo tienes en Ajustes, Vista, Campo de visión. En iRacing se mete en las opciones de gráficos. En Le Mans Ultimate, si llevas triples, antes de tocar el FOV conviene dejar bien la configuración de pantallas: lo explico paso a paso en <a href="/configurar-triple-pantalla-en-le-mans-ultimate/">cómo configurar triple pantalla en Le Mans Ultimate</a>.</p>
+
+    <p>Con RaceRoom y BeamNG hay discusión sobre cuál de los dos valores usan, así que no me mojo: prueba los dos y quédate con el que te deje el coche del tamaño correcto.</p>
+
+    <h2>El ángulo de las laterales</h2>
+
+    <p>Si llevas tres pantallas, el ángulo importa tanto como el FOV. La idea es sencilla: las tres deberían formar un arco alrededor de tu cabeza, como si fueran la ventanilla curva de un casco. Para eso, cada lateral tiene que girar hacia ti justo lo que abarca una pantalla desde donde estás sentado. Por eso el ángulo que te sale arriba es, casi siempre, el mismo número que el FOV horizontal de un panel.</p>
+
+    <p>Con las pantallas demasiado abiertas, los espejos y los retrovisores quedan lejos y los adelantamientos se te escapan. Demasiado cerradas, se te mete la imagen por los lados y marea. Si las tuyas no llegan al ángulo que te pide, acércalas un poco en vez de forzar: cuanto más cerca estés, más abiertas pueden ir.</p>
+
+    <h2>Te va a parecer mal el primer día</h2>
+
+    <p>Si vienes de un FOV alto, el correcto te va a parecer que estás con la cara pegada al salpicadero. Es normal y se pasa en dos o tres sesiones. Lo que ganas es una referencia de velocidad que antes no tenías: las frenadas dejan de ser a ojo y los puntos de giro empiezan a aparecer siempre en el mismo sitio. Si a los tres días sigue sin convencerte, súbelo dos o tres grados y para de tocarlo.</p>
+
+    <p>Por cierto, si estás decidiendo cómo montar el puesto antes que nada, ahí tienes lo que pienso de <a href="/triple-pantalla-ultrawide-o-vr-para-simracing/">triples, ultrapanorámicas y VR</a>.</p>
+
+    <p><a href="/">Volver al inicio</a></p>
+  </article>
+</div>
+
+<div class="kerb"></div>
+
+<div class="envoltorio">
+  <footer>
+    <div class="redes">
+      <a href="https://www.youtube.com/@WildSimRacer">YouTube</a>
+      <a href="https://www.instagram.com/wildsimracer/">Instagram</a>
+      <a href="/contacto/">Contacto</a>
+    </div>
+    <p>WildSimRacer</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var g = function (id) { return document.getElementById(id); };
+  var gr = function (rad) { return rad * 180 / Math.PI; };
+
+  function calcular() {
+    var pulgadas  = parseFloat(g("pulgadas").value);
+    var distancia = parseFloat(g("distancia").value);
+    var tres      = g("pantallas").value === "3";
+    var marcoMm   = parseFloat(g("marco").value);
+    var partes    = g("aspecto").value.split(":");
+    var ra = parseFloat(partes[0]), rb = parseFloat(partes[1]);
+
+    g("campo-marco").hidden  = !tres;
+    g("dato-angulo").hidden  = !tres;
+    g("nota-triple").hidden  = !tres;
+    g("nota-plano").hidden   = !tres;
+
+    var valido = isFinite(pulgadas) && pulgadas > 0 &&
+                 isFinite(distancia) && distancia > 0;
+    if (!valido) {
+      g("r-h").textContent = "—";
+      g("r-v").textContent = "—";
+      g("r-a").textContent = "—";
+      g("r-t").textContent = "—";
+      return;
+    }
+    if (!isFinite(marcoMm) || marcoMm < 0) marcoMm = 0;
+
+    var diagonal = pulgadas * 2.54;
+    var norma = Math.sqrt(ra * ra + rb * rb);
+    var ancho = diagonal * (ra / norma);
+    var alto  = diagonal * (rb / norma);
+    var marco = marcoMm / 10;
+
+    var h = gr(2 * Math.atan((ancho / 2) / distancia));
+    var v = gr(2 * Math.atan((alto  / 2) / distancia));
+
+    g("r-h").textContent = h.toFixed(1) + "°";
+    g("r-v").textContent = v.toFixed(1) + "°";
+
+    if (tres) {
+      var angulo = gr(2 * Math.atan(((ancho + marco) / 2) / distancia));
+      var total  = gr(2 * Math.atan(((3 * ancho + 2 * marco) / 2) / distancia));
+      g("r-a").textContent = angulo.toFixed(1) + "°";
+      g("r-t").textContent = total.toFixed(1) + "°";
+    }
+  }
+
+  g("calc").addEventListener("input", calcular);
+  g("calc").addEventListener("change", calcular);
+  g("calc").addEventListener("submit", function (e) { e.preventDefault(); });
+  calcular();
+})();
+</script>
+
+</body>
+</html>
