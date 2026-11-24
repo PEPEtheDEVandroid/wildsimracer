@@ -677,3 +677,103 @@ footer {
   .calc { padding: 18px; }
   .calc-dato strong { font-size: 2.2rem; }
 }
+
+/* Menú de navegación */
+.cabecera-mini nav,
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 20px;
+}
+
+.cabecera-mini nav a { margin-left: 0; }
+
+header nav { margin-top: 14px; }
+
+.cabecera-mini nav a,
+.cabecera-mini nav summary,
+header nav a,
+header nav summary {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+nav a[aria-current="page"],
+nav summary.activo {
+  color: var(--texto);
+  box-shadow: inset 0 -2px 0 var(--amarillo);
+}
+
+/* Desplegable de Artículos */
+nav .desplegable {
+  position: relative;
+}
+
+nav .desplegable summary {
+  list-style: none;
+  cursor: pointer;
+  color: var(--amarillo);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+nav .desplegable summary::-webkit-details-marker { display: none; }
+
+nav .desplegable summary::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+  transition: transform .15s ease;
+}
+
+nav .desplegable[open] summary::after { transform: rotate(180deg); }
+
+nav .desplegable-panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 30;
+  min-width: 190px;
+  display: flex;
+  flex-direction: column;
+  background: var(--superficie);
+  border: 1px solid var(--linea);
+  border-radius: 6px;
+  padding: 6px 0;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, .55);
+}
+
+nav .desplegable-panel a {
+  padding: 10px 18px;
+  letter-spacing: 0.06em;
+}
+
+nav .desplegable-panel a:hover,
+nav .desplegable-panel a:focus-visible {
+  background: var(--linea);
+  color: var(--texto);
+}
+
+nav .desplegable-panel a[aria-current="page"] {
+  box-shadow: inset 3px 0 0 var(--amarillo);
+}
+
+@media (max-width: 620px) {
+  .cabecera-mini { gap: 10px; }
+  .cabecera-mini nav,
+  header nav { gap: 4px 16px; }
+  .cabecera-mini nav a,
+  .cabecera-mini nav summary,
+  header nav a,
+  header nav summary { font-size: 0.92rem; }
+  nav .desplegable-panel { min-width: 170px; }
+}
